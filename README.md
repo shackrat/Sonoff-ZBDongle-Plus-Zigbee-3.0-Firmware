@@ -5,7 +5,7 @@ This repository contains *experimental* firmware builds for the Sonoff ZBDongle-
 
 This firmware presented here is released for non-production use. Installing this firmware requires knowledge of how to use the tools to flash firmware onto the Sonoff ZBDongle-P.  Please do not attempt to install this firmware if you do not possess knowledge or the tools to do-so, including how to use the built-in recovery facility to restore from a bad flash.
 
-*Use this firmware at your own risk!*. This firmware has only been tested myself on two separate Zigbee2MQTT instances, each with more than 100 devices.  I am not responsible for anything that happens to your device (i.e. bricked) as a result of using this firmware.
+*Use this firmware at your own risk!!* This firmware has only been tested myself on two separate Zigbee2MQTT instances, each with more than 100 devices.  I am not responsible for anything that happens to your device (i.e. bricked) as a result of using this firmware.
 
 ## Goal: Hardware Flow Control
 
