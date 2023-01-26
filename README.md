@@ -1,5 +1,5 @@
 # Sonoff ZBDongle Plus (ZBDongle-P) Zigbee stick
-This repository contains *experimental* firmware builds for the Sonoff ZBDongle-Plus (ZBDongle-P) using the CC2652P chipset.  It is intended for use with Zigbee2MQTT but may also work with other Zigbee implementation such as Home Assistant's ZHA integration, however such use is untested.
+This repository contains *experimental* **SDK 6.40.00.13** firmware builds for the Sonoff ZBDongle-Plus (ZBDongle-P) using the CC2652P chipset.  It is intended for use with Zigbee2MQTT but may also work with other Zigbee implementation such as Home Assistant's ZHA integration, however such use is untested.
   
 ## Disclaimer
 
