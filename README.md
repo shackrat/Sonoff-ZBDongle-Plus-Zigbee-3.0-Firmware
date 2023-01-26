@@ -44,7 +44,6 @@ diff ti_drivers_config.h ~/syscfg.or/ti_drivers_config.h
 
 and
 ```
-
 diff ti_drivers_config.c ~/syscfg.or/ti_drivers_config.c
 275,278c275,276
 <     /* Owned by CONFIG_DISPLAY_UART as RTS */
@@ -54,10 +53,14 @@ diff ti_drivers_config.c ~/syscfg.or/ti_drivers_config.c
 ---
 >     GPIO_CFG_NO_DIR, /* DIO_18 */
 >     GPIO_CFG_NO_DIR, /* DIO_19 */
-313,314d304
+313,314d310
 < const uint_least8_t CONFIG_GPIO_DISPLAY_UART_GPIO_3_CONST = CONFIG_GPIO_DISPLAY_UART_GPIO_3;
 < const uint_least8_t CONFIG_GPIO_DISPLAY_UART_GPIO_4_CONST = CONFIG_GPIO_DISPLAY_UART_GPIO_4;
-824,825c809,810
+558c554
+<  * ========== ===== ===== =====
+---
+>  * ========== ===== ===== ===== 
+824,825c820,821
 <     .ctsPin             = CONFIG_GPIO_DISPLAY_UART_GPIO_3,
 <     .rtsPin             = CONFIG_GPIO_DISPLAY_UART_GPIO_4,
 ---
