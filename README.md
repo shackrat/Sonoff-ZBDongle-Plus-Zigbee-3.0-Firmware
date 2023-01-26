@@ -7,11 +7,15 @@ This firmware presented here is released for non-production use. Installing this
 
 *Use this firmware at your own risk!!* This firmware has only been tested myself on two separate Zigbee2MQTT instances, each with more than 100 devices.  I am not responsible for anything that happens to your device (i.e. bricked) as a result of using this firmware.
 
+There are 2 directories containing pre-built firmware;
+*./no_hfc* is a standard build without hardware flow control
+*./hfc* is a standard build with the hardware flow control patch applied
+
 ## Goal: Hardware Flow Control
 
 Hardware Flow Control (CTS/RTS) should help improve performance of the ZBDongle-P by offloading flow control management from the CPU. On most systems this will not have a noticeable impact but is believed to help networks with heavier traffic.
 
-This firmware attempts to enable the hardware flow control feature of the Sonoff ZBDongle-P using a patch maintained by [Koenkk](https://github.com/Koenkk/Z-Stack-firmware/blob/develop/coordinator/Z-Stack_3.x.0/). In order to use this firmware for hardware flow control, the ZBDongle-P must be disassembled to in order to turn on the hardware flow dip switch, and Z2M must be configured to enable it.
+The firmware located in the **hfc** folder attempts to enable the hardware flow control feature of the Sonoff ZBDongle-P using a patch maintained by [Koenkk](https://github.com/Koenkk/Z-Stack-firmware/blob/develop/coordinator/Z-Stack_3.x.0/). In order to use this firmware for hardware flow control, the ZBDongle-P must be disassembled to in order to turn on the hardware flow dip switch, and Z2M must be configured to enable it.
 
 
 ## Building it Yourself
