@@ -9,8 +9,8 @@ This firmware presented here is released for non-production use. Installing this
 
 There are 2 directories containing pre-built firmware;
 ```
-*./no_hfc* is a standard build without hardware flow control
-*./hfc* is a standard build with the hardware flow control patch applied
+./no_hfc/ is a standard build without hardware flow control
+./hfc/ is a standard build with the hardware flow control patch applied
 ```
 
 ## Goal: Hardware Flow Control
