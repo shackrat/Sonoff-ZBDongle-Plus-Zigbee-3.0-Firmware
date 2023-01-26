@@ -30,14 +30,14 @@ Once the patch is applied, the following two files in the syscfg directory must 
 diff ti_drivers_config.h ~/syscfg.or/ti_drivers_config.h 
 97,104d96
 <   /* Owned by CONFIG_DISPLAY_UART as  */
-< extern const uint_least8_t CONFIG_GPIO_3_CONST;
-< #define CONFIG_GPIO_3 19
+< extern const uint_least8_t CONFIG_GPIO_DISPLAY_UART_GPIO_3_CONST;
+< #define CONFIG_GPIO_DISPLAY_UART_GPIO_3 19
 < 
 < /* Owned by CONFIG_DISPLAY_UART as  */
-< extern const uint_least8_t CONFIG_GPIO_4_CONST;
-< #define CONFIG_GPIO_4 18
+< extern const uint_least8_t CONFIG_GPIO_DISPLAY_UART_GPIO_4_CONST;
+< #define CONFIG_GPIO_DISPLAY_UART_GPIO_4 18
 < 
-225,226d216
+226,227d216
 <  *  CTS: DIO19
 <  *  RTS: DIO18
 ```
@@ -46,7 +46,7 @@ and
 ```
 
 diff ti_drivers_config.c ~/syscfg.or/ti_drivers_config.c
-269,272c269,270
+275,278c275,276
 <     /* Owned by CONFIG_DISPLAY_UART as RTS */
 <     GPIO_CFG_OUTPUT_INTERNAL | GPIO_CFG_OUT_STR_MED | GPIO_CFG_OUT_LOW, /* CONFIG_GPIO_4 */
 <     /* Owned by CONFIG_DISPLAY_UART as CTS */
@@ -54,12 +54,12 @@ diff ti_drivers_config.c ~/syscfg.or/ti_drivers_config.c
 ---
 >     GPIO_CFG_NO_DIR, /* DIO_18 */
 >     GPIO_CFG_NO_DIR, /* DIO_19 */
-307,308d304
-< const uint_least8_t CONFIG_GPIO_3_CONST = CONFIG_GPIO_3;
-< const uint_least8_t CONFIG_GPIO_4_CONST = CONFIG_GPIO_4;
-813,814c809,810
-<     .ctsPin             = CONFIG_GPIO_3,
-<     .rtsPin             = CONFIG_GPIO_4,
+313,314d304
+< const uint_least8_t CONFIG_GPIO_DISPLAY_UART_GPIO_3_CONST = CONFIG_GPIO_DISPLAY_UART_GPIO_3;
+< const uint_least8_t CONFIG_GPIO_DISPLAY_UART_GPIO_4_CONST = CONFIG_GPIO_DISPLAY_UART_GPIO_4;
+824,825c809,810
+<     .ctsPin             = CONFIG_GPIO_DISPLAY_UART_GPIO_3,
+<     .rtsPin             = CONFIG_GPIO_DISPLAY_UART_GPIO_4,
 ---
 >     .ctsPin             = GPIO_INVALID_INDEX,
 >     .rtsPin             = GPIO_INVALID_INDEX,
